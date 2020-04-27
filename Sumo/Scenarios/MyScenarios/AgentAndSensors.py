@@ -32,8 +32,8 @@ def make_sensor_plot():
     snsr_lst = [long_range, mid_range_scan, short_range_front, short_range_back_left, short_range_back_right,
                 multi_mode_back_1, multi_mode_back_2]
 
-    # for snsr in snsr_lst:
-    #     ego_agent.add_sensor(snsr)
+    for snsr in snsr_lst:
+        ego_agent.add_sensor(snsr)
 
 
     fig = plt.figure()
@@ -103,4 +103,5 @@ def sensor_recognition_example():
     ego_agent.controller.sensor_based_control()
 
 if __name__ == '__main__':
+    make_sensor_plot()
     sensor_recognition_example()

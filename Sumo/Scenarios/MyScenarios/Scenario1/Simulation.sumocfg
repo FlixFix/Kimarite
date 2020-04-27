@@ -1,0 +1,14 @@
+<configuration>
+    <input>
+        <net-file value="ValidationNetwork.net.xml" />
+        <route-files value="flow.rou.xml" />
+        <!--route-files value=".rou.xml" />-->
+        <!--additional-files value=".add.xml" />-->
+        <gui-settings-file value="simulation.settings.xml"/>
+        <step-length value="0.1" />
+    </input>
+
+    <viewsettings>
+        <scheme name="real world"/>
+    </viewsettings>
+</configuration>

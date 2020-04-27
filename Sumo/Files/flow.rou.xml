@@ -1,0 +1,29 @@
+<routes>
+   <vType id="autonomous" type="passenger" length="4.3" width="1.8" accel="3.5" decel="2.2" sigma="1.0"
+          imgFile="C:\Users\Felix\Masterarbeit\Coding\models\sumo_car_model.png"/>
+   <vType id="bike" departLane="2" type="bicycle" length="1.6" width=".65" accel="1.2" decel="3" maxSpeed="3" sigma="0.5" guiShape="bicycle"/>
+   <vType id="sumo_car" type="passenger" length="4.3" width="1.8" maxSpeed="6" departPos="0" sigma="0"/>
+
+   <vType id="krauss_car"
+          type="passenger"
+          carFollowModel="Krauss"
+          length="4.3"
+          width="1.8"
+          accel="2.9"
+          decel="9"
+          sigma="0"
+          maxSpeed="18.0"
+          minGap="10"
+          actionStepLength=".1"/>
+   <vType id="idm_car" type="passenger" carFollowModel="IDM" length="4.3" width="1.8" accel="2.9" decel="9"
+          sigma="0" maxSpeed="18.0" minGap="10" actionStepLength=".1"/>
+   <vType id="wiedemann_car" type="passenger" carFollowModel="W99" length="4.3" width="1.8" accel="2.9"
+          decel="9"
+          sigma="0" maxSpeed="18.0" minGap="10" actionStepLength=".1"/>
+
+
+<!--   <flow id="crossing_flow1" type="sumo_car" from="P_in" to="gneE70" beg="100" end="101" number="1"/>-->
+<!--   <flow id="carflow" type="autonomous" from="P_in" to="W_out" beg="0" end="15000" number="100"/>-->
+<!--   <flow id="carflow2" type="autonomous" from="-gneE40" to="J_out" beg="0" end="50" number="100"/>-->
+<!--   <flow id="bikeflow" type="bike" from="J_in" to="gneE45" beg="0" end="50" number="100"/>-->
+</routes>

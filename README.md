@@ -19,6 +19,7 @@ The Agent can be fitted with a variety of sensors, whose implementation is based
 Currently, a LiDAR sensor model and a simple Camera is supported. Both perception devices can be adjusted using different
 parameters and placed at an arbitrary position on the vehicle.
 
+
 ### The Controller
 ![The implemented Controller](figures/controller.png)
 
@@ -28,6 +29,8 @@ evaluate simulation results.
 
 ### Interfacing with SUMO
 ![Interface with SUMO](figures/sumo_parallel.PNG)
+
+![Showing the agent within the simulation](figures/g2366.png)
 
 The interface with SUMO allows the simultaneous simulation within SUMO an Python's Matplotlib. The Simulation within Matplotlib
 can be adjusted and extended to ones liking, showing all outputs of the different controller output.

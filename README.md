@@ -10,6 +10,7 @@ This project features the following key elements:
 * Testing Data from a Bike Simulator Study carried out at TUM
 * An Interface to connect the autonomous agent to SUMO
 * Different Plotting Functionality to create appealing results
+* Different Path Planning Algorithms such as RRT* and A*
 
 
 ### The Agent

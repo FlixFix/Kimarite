@@ -19,6 +19,7 @@ import Sumo.SumoHelperFcts as shf
 import Sumo.SumoParameters as sp
 from PathPlanningTools import Base as base
 from PathPlanningTools import MyRRT as planner
+import Sumo.Dashboard as dash
 
 
 class Timing:
@@ -1611,6 +1612,7 @@ class Monitoring:
         self.most_recent_connection = None
         self.scenario_path = root_path
         self.timer = TIME
+        self.dashboard = dash.Dashboard()
 
     def console_output(self):
         """
@@ -1634,6 +1636,8 @@ class Monitoring:
         self.complete_trajectory.append(copy.copy(pos))
         self.complete_directions.append(dir)
         self.complete_speeds.append(speed)
+        
+        self.dashboard.update_dash(self.control_unit.agent, self.control_unit.activator)
 
     @timing
     def record_sensor_data(self, sensor_data):

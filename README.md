@@ -37,6 +37,36 @@ evaluate simulation results.
 The interface with SUMO allows the simultaneous simulation within SUMO an Python's Matplotlib. The Simulation within Matplotlib
 can be adjusted and extended to ones liking, showing all outputs of the different controller output.
 
+### How to use the autonomous agent within SUMO and run the scenarios
+
+In order to use the autonomous agent, do the following:
+1. Create an autonomous agent using the configuration parameters:
+   * Starting point
+   * Vehicle length
+   * Vehicle width
+   * Minimum curvature
+2. Set a destination point within the simulation network
+3. Fit the agent with any number of sensors defined by the following parameters:
+   * Sensor reach
+   * Sensor covering angle
+   * Sensor coverage (percentage value)
+   * Sensor direction based on the facing direction of the agent
+   * Sensor position related to the agents local coordinate system based on it's back left corner
+   * Sensor type (not yet implemented different types)
+4. Set up the Controlling Unit providing the autonomous agent and the target position
+5. Enable/Disable overtaking behaviour of the autonomous agent
+
+In order to run the various testing scenarios, follow these steps:
+1. Completely set up the autonomous agent
+2. Initialize the controller of the autonomous agent providing a start-lane and end-lane ID, such as the complete SUMO network
+3. Add the autonomous agent to SUMO
+4. Add various other scenario agents to SUMO
+5. Start the simulation running traci.simulationStep()
+6. Start the control loop running the sensor_based_control()-method of the controller
+7. In order to print the results, they are stored throughout the simulation and can be accessed through the agent's data-monitor property once the simulation is completed
+
+All scenarios provided in this study are to be found under the following [folder](Sumo/Scenarios/MyScenarios).
+
 ### Results
 ![Results](figures/Figure_2.png)
 
